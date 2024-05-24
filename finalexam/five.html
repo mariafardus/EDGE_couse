@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="one.html">Problem 1</a> |
+        <a href="two.html">Problem 2</a> |
+        <a href="three.html">Problem 3</a> |
+        <a href="four.html">Problem 4</a> |
+        <a href="five.html">Problem 5</a> |
+        <a href="six.html">Problem 6</a> |
+        <a href="seven.html">Problem 7</a> |
+        <a href="eight.html">Problem 8</a> |
+        <a href="vue/index.html" target="_blank">Problem 9</a>
+    </nav> 
+    <br><br>
+    <h1>Problem 5</h1><br>
+    <div class="container mt-5">
+        <h1>Your score is :</h1>
+        <div class="score-display mb-3">
+            <h2>Score: <span id="score">0</span></h2>
+        </div>
+        <button id="increase" class="btn btn-success">Increase</button>
+        <button id="decrease" class="btn btn-danger">Decrease</button>
+    </div>
+
+    <script>
+        // Initial score
+        let score = 0;
+
+        // Function to update the score display
+        function updateScoreDisplay() {
+            document.getElementById('score').textContent = score;
+        }
+
+        // Increase score by 5
+        document.getElementById('increase').addEventListener('click', function() {
+            score += 5;
+            updateScoreDisplay();
+        });
+
+        // Decrease score by 10
+        document.getElementById('decrease').addEventListener('click', function() {
+            score -= 10;
+            updateScoreDisplay();
+        });
+
+        // Initialize the score display
+        updateScoreDisplay();
+    </script>
+
+</body>
+</html>
